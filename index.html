@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h1>Scroll Function</h1>                            
+                        </div>
+                        <div class="col-md-8 link">
+                            <h4><a href="#" id="go">Scroll to div 4</a></h4>
+                        </div>
+                    </div>
+
+                    <div class="scrollDiv" id="scrollOne">
+                        <p>Div One</p>
+                    </div>
+                    <div class="scrollDiv" id="scrollTwo">
+                        <p>Div Two</p>
+                    </div>
+                    <div class="scrollDiv" id="scrollThree">
+                        <p>Div Three</p>
+                    </div>
+                    <div class="scrollDiv" id="scrollFour">
+                        <h3>This is the end of our destination</h3>
+                        <p>Div Four</p>
+                    </div>
+                    <div class="scrollDiv" id="scrollFive">
+                        <p>Div Five</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="js/scroll.js"></script>
+        <script>
+            const begin = document.getElementById('go');
+            const end = document.getElementById('scrollFour');
+
+            begin.addEventListener('click', function(){
+                //Pass in the id of the destination div and the speed
+                scrollWin('scrollFour', 10);
+            });            
+        </script>
+    
+    </body>
+</html>
